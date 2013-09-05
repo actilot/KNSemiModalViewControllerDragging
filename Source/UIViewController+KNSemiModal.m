@@ -9,6 +9,7 @@
 #import "UIViewController+KNSemiModal.h"
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
+#import "BCGeometry.h"
 
 const struct KNSemiModalOptionKeys KNSemiModalOptionKeys = {
 	.traverseParentHierarchy = @"KNSemiModalOptionTraverseParentHierarchy",
@@ -410,11 +411,13 @@ const struct KNSemiModalOptionKeys KNSemiModalOptionKeys = {
         CGFloat customHeight = [[self ym_optionOrDefaultForKey:KNSemiModalOptionKeys.customHeight] doubleValue];
         
         if (customWidth > 0.0f) {
-            modalFrame = CGRectSetWidth(modalFrame, customWidth);
+//            modalFrame = CGRectSetWidth(modalFrame, customWidth);
+            modalFrame = BCGRectSetWidth(modalFrame, customWidth);
         }
         
         if (customHeight > 0.0f) {
-            modalFrame = CGRectSetHeight(modalFrame, customHeight);
+//            modalFrame = CGRectSetHeight(modalFrame, customHeight);
+            modalFrame = BCGRectSetHeight(modalFrame, customHeight);
         }
         
         CGFloat modalHeight = modalFrame.size.height;

@@ -1,0 +1,3 @@
+[submodule "Benihime"]
+	path = Benihime
+	url = git://github.com/shiki/ios-benihime.git
